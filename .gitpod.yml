@@ -7,6 +7,12 @@ tasks:
       # This script is bundled inside the Docker image
       bash /home/gitpod/.setup/run-gitpod-init.sh
 
+      # Allow users to overwrite the SL script contents via URL variables
+      if [ -n "${KURTOSIS_SL_SCRIPT_CONTENTS}" ]; then
+        echo "${KURTOSIS_SL_SCRIPT_CONTENTS}" > /workspace/playground-gitpod/fresh-package/main.star
+        code /workspace/playground-gitpod/fresh-package/main.star
+      fi
+
 ports:
   - name: Kurtosis Engine GRPC Port
     description: The Kurtosis engine's GRPC listen port
