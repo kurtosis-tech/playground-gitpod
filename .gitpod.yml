@@ -12,6 +12,11 @@ ports:
     description: The Kurtosis engine's GRPC listen port
     port: 9710
     onOpen: ignore
+    # TODO Delete this when https://github.com/kurtosis-tech/kurtosis/issues/560 is fixed
+  - name: (DEPRECATEDD) Kurtosis Engine GRPC Proxy Port
+    description: The Kurtosis engine's deprecated GRPC proxy listen port
+    port: 9711
+    onOpen: ignore
 
 vscode:
   extensions:
