@@ -1,0 +1,21 @@
+# We use a hardcoded image so that startup is much faster (don't want users waiting for Gitpod to build the Docker image)
+image: mieubrisse/playground-gitpod-base
+
+tasks:
+  - name: Kurtosis
+    command: |
+      # Run the script that's bundled with the Docker image
+      bash /setup/prep-gitpod.sh
+
+      # If a Kurtosis package was specified as an envvar, run it
+      [ -n "${KURTOSIS_PACKAGE_LOCATOR}" ] && kurtosis run "${KURTOSIS_PACKAGE_LOCATOR}" ${
+
+ports:
+  - name: Kurtosis Engine GRPC Port
+    description: The Kurtosis engine's GRPC listen port
+    port: 9710
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - Kurtosis.kurtosis-extension
