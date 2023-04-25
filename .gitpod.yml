@@ -5,7 +5,7 @@ tasks:
   - name: Kurtosis
     command: |
       # This script is bundled inside the Docker image
-      bash /setup/prep-gitpod.sh
+      bash /setup/run-gitpod-init.sh
 
 ports:
   - name: Kurtosis Engine GRPC Port
