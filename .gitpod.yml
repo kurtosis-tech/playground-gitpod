@@ -4,11 +4,8 @@ image: mieubrisse/playground-gitpod-base
 tasks:
   - name: Kurtosis
     command: |
-      # Run the script that's bundled with the Docker image
+      # This script is bundled inside the Docker image
       bash /setup/prep-gitpod.sh
-
-      # If a Kurtosis package was specified as an envvar, run it
-      [ -n "${KURTOSIS_PACKAGE_LOCATOR}" ] && kurtosis run "${KURTOSIS_PACKAGE_LOCATOR}" ${
 
 ports:
   - name: Kurtosis Engine GRPC Port
