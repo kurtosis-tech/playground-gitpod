@@ -3,10 +3,12 @@ Welcome to the Kurtosis Playground!
 
 Here you have:
 
-- The `kurtosis` CLI installed, with tab completion enabled (see 
-- The Kurtosis VSCode plugin installed, which provides tab-completion for all `.star` files
+- The `kurtosis` CLI installed, with tab-completion enabled
+- The Kurtosis VSCode plugin installed, which provides syntax highlighting and tab-completion for all `.star` files
 
-NOTE: any port Kurtosis binds can be accessed with the pane in the very bottom-right corner of the screen.
+Any ports made available through Kurtosis can be accessed with the pane in the very bottom-right corner of the screen.
+
+If you'd like to work on your own machine, you can always [install the Kurtosis CLI locally](https://docs.kurtosis.com/install).
 
 ### Ideas
 
